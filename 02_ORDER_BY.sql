@@ -59,3 +59,37 @@ select
 from
     tbl_menu
 order by field(orderable_status, 'N','Y')
+
+-- null 값이 있는 컬럼에 대한 정렬
+select
+    category_code,
+    category_name,
+    ref_category_code
+from
+    tbl_category
+order by
+    ref_category_code; -- 오름차순 정렬했을 때 null이 상단으로 온다.
+
+-- null 값 위치에 따라 정렬할 때
+-- ase : 오름차순 정렬시 null 이 마지막으로 위치된다. (default)
+-- desc : 내림차순 정렬시 null 이 첫번부터 위치된다.
+select
+    category_code,
+    category_name,
+    ref_category_code
+from
+    tbl_category
+order by
+    ref_category_code is null desc;
+
+-- 한개를 조회해서 두번 정렬 할때
+select
+    category_code,
+    category_name,
+    ref_category_code
+from
+    tbl_category
+order by
+    ref_category_code is null desc, -- null 값의 위치를 정하고
+    ref_category_code desc; -- ref_category_code 오름차순으로 정렬
+

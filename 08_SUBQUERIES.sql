@@ -235,6 +235,3 @@ from
     menucate
 order by
     menu_name;
-
-
-

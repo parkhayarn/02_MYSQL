@@ -58,7 +58,7 @@ select
     orderable_status
 from
     tbl_menu
-order by field(orderable_status, 'N','Y')
+order by field(orderable_status, 'N','Y');
 
 -- null 값이 있는 컬럼에 대한 정렬
 select

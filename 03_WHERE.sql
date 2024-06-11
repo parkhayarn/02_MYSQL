@@ -212,7 +212,7 @@ select
     *
 from
     tbl_menu
-where menu_name not like '%갈치%'
+where menu_name not like '%갈치%';
 
 /*
 IN 연산자

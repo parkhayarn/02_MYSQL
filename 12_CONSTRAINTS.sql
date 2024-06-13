@@ -8,7 +8,7 @@ show grants for 'ohgiraffers'@'%'; -- 권한 조회
 
 use user_db; -- user_db 사용
 
-drop table if exists tbl_contury,tbl_check
+drop table if exists tbl_contury,tbl_check;
 
 -- CONSTRAINTS
 -- 제약조건, 테이블에 데이터가 입력되거나 수정될 때의 규칙을 정의한다.
